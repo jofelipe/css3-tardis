@@ -1,0 +1,125 @@
+* { margin: 0; padding: 0; border: 0 }
+
+body { background: url(bg.jpg) no-repeat left center }
+
+// Mixins and variables
+.no-text { text-indent: -9999px }
+.center { margin: 0 auto }
+.bg { background: #23518f }
+.bg-two { background: #223369 }
+.bg-three { background: #285084 }
+.radius { border-top-left-radius: 1px; border-top-right-radius: 1px }
+.gradient-lock { background: #1d4372; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFkNDM3MiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzNkNTg4NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxZDQzNzIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); background: -moz-linear-gradient(left,  #1d4372 0%, #3d5885 50%, #1d4372 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1d4372), color-stop(50%,#3d5885), color-stop(100%,#1d4372)); background: -webkit-linear-gradient(left,  #1d4372 0%,#3d5885 50%,#1d4372 100%); background: -o-linear-gradient(left,  #1d4372 0%,#3d5885 50%,#1d4372 100%); background: -ms-linear-gradient(left,  #1d4372 0%,#3d5885 50%,#1d4372 100%); background: linear-gradient(to right,  #1d4372 0%,#3d5885 50%,#1d4372 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d4372', endColorstr='#1d4372',GradientType=1 )}
+.detail-door-class { height: 125px; background: #214778; width: 125px; .center; border-top: 2px solid rgba(36, 59, 101, .85); border-left: 1px solid rgba(36, 59, 101, .65); margin-bottom: 40px }
+
+#geral { width: 700px; margin: 5% auto; overflow: hidden }
+
+#tardis-geral { width: 500px; overflow: hidden; .center;
+
+	.arrow-top { width: 0; height: 0; border: 30px solid transparent; display:block; border-bottom-color: #23518f; .center }
+
+	#light { width: 58px; height: 65px; box-shadow: 0 0 15px 5px #fff; border-radius: 15%; .center; background: #fff; position: relative; margin-top: -5px;
+		#bottom-light { .bg; width: 58px; height: 10px; position: absolute; bottom: 0 }
+
+		&:before { content: "."; display: block; height: 65px; position: absolute; width: 3px; .no-text; top: 0; left: 27px; .bg }
+		&:after { content: "."; display: block; height: 3px; position: absolute; width: 58px; .no-text; top: 28px; left: 0; .bg }
+	}
+
+	#top-one { width: 395px; height: 10px; .bg; .center; .radius }
+	#top-two { width: 435px; height: 25px; .bg; .center; .radius }
+
+	// Title
+	#title { width: 500px; .bg; .center; .radius; padding: 8px 0;
+		#bg-title { background: black; color: white; width: 435px; height: 30px; padding: 6px 0 10px; .center; text-align: center;
+			p { font: 30px/13px Arial, Helvetica, sans-serif; text-transform: uppercase;
+				span { display: inline-block; font-size: 16px; line-height: 16px; width: 60px; margin: 0 20px }
+			}
+		}
+	}
+
+	#border-one { .bg-two; .center; width: 485px; height: 3px; border-bottom: 2px solid #091728 }
+
+	// All styles of doors
+	#doors-geral { overflow: hidden; width: 485px; .center; .bg-three;
+
+		#column-left { height: 730px; width: 55px; float: left; border-bottom: 3px solid #1b406d; border-right: 3px solid #1b406d }
+
+		// Glasses
+		.glasses { width: 137px; height: 160px; .center; overflow: hidden; margin-bottom: 30px;
+			li { display: inline-block; margin-right: 3px; background: #fefefe; width: 33px; height: 80px; margin-bottom: 1px;
+				&:nth-child(3n) { margin-right: 0 }
+			}
+			li.width { width: 50px }
+			li.height { height: 73px }
+		}
+
+		// Door left and right
+		#door-left, #door-right { width: 180px; border-top: 30px solid #1b406d; border-right: 3px solid #1b406d; float: left; border-bottom: 3px solid #1b406d;
+
+			// Warning
+			#warning { .detail-door; position: relative;
+				#paper { background: #b7b9c5; -webkit-box-shadow: inset 0px 0px 10px 3px #cfcecc; box-shadow: inset 0px 0px 10px 3px #cfcecc; padding: 5px; width: 83px; height: 90px; .center; margin-top: 10px; font-family: Georgia, "Times New Roman"; text-align: center; text-transform: uppercase; color: #1A0000; position: relative;
+					p { text-shadow: 0 0 4px #fff }
+					.p-one { font-size: 8px }
+					.p-two { font-size: 12px;
+						span { display: block; font-size: 8px }
+					}
+					.p-three { font-size: 12px;
+						span { display: block; font-size: 7px }
+					}
+					.p-four { font-size: 7px;
+						span { display: block; font-size: 6px }
+					}
+					.p-five { font-size: 11px }
+
+					&:after { .gradient-lock; border-radius: 5px; content: "."; display: block; height: 38px; position: absolute; width: 7px; border-bottom: 2px solid #000b37; border-left: 1px solid #1b406d; .no-text; bottom: 28px; right: -12px; border-top: 4px solid rgba(255, 255, 255, .1) }
+				}
+
+				&:before { .gradient-lock; border-radius: 5px; content: "."; display: block; height: 25px; position: absolute; width: 5px; border-bottom: 2px solid #000b37; border-left: 1px solid #1b406d; .no-text; top: 6px; left: -2px }
+				&:after { .gradient-lock; border-radius: 5px; content: "."; display: block; height: 25px; position: absolute; width: 5px; border-bottom: 2px solid #000b37; border-left: 1px solid #1b406d; .no-text; bottom: 15px; left: -2px }
+			}
+
+			.detail-door { .detail-door-class }
+
+			// Locks (right)
+			.locks { position: relative;
+				&:before { .gradient-lock; border-radius: 5px; content: "."; display: block; height: 50px; position: absolute; width: 10px; border-bottom: 3px solid #000b37; border-left: 1px solid #1b406d; .no-text; bottom: 37px; left: -16px; border-top: 4px solid rgba(255, 255, 255, .1) }
+				&:after { background: #796737; border-radius: 50%; content: "|"; display: block; height: 17px; position: absolute; width: 17px; bottom: -25px; left: -14px; font-size: 11px; text-align: center }
+			}
+		}
+
+		// Individual styles of right door
+		#door-right { border-left: 8px solid #1b406d; border-right: 0 none; width: 163px }
+
+		#divider-door { width: 15px; .bg-three; float: left; height: 723px; border-bottom: 3px solid #1b406d }
+
+		#column-right { height: 730px; width: 55px; float: right; border-bottom: 3px solid #1b406d; border-left: 3px solid #1b406d }
+
+	}
+
+	// Bottom (Footer) styles
+	#bottom-one { .bg; width: 500px; height: 10px; .center }
+	#bottom-two { .bg; width: 500px; height: 35px; .center; border-top: 2px solid rgba(255, 255, 255, .1); border-bottom-right-radius: 2px; border-bottom-left-radius: 2px }
+
+}
+
+// Cool animation on hover :)
+#tardis-geral:hover { -webkit-animation: shuffle .5s linear; -moz-animation: shuffle .5s linear; animation: shuffle .5s linear }
+
+@-webkit-keyframes shuffle {
+	0% { -webkit-transform: scale(1) }
+	50% { -webkit-transform: scale(.85) }
+	100% { -webkit-transform: scale(1) }
+}
+
+@-moz-keyframes shuffle {
+	0% { -moz-transform: scale(1) }
+	50% { -moz-transform: scale(.85) }
+	100% { -moz-transform: scale(1) }
+}
+
+@keyframes shuffle {
+	0% { transform: scale(1) }
+	50% { transform: scale(.85) }
+	100% { transform: scale(1) }
+}
